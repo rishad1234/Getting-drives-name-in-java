@@ -13,20 +13,29 @@ public class Search {
     public Search() {
         this.rootDir = new String[26];
     }
-    
+    /*
+        for test purpose only
+    */
     public void print(){
         for(int i = 0; i < rootDir.length; i++){
             System.out.println(rootDir[i]);
         }
     }
-
+    /*
+        this method set the rootDir array with
+        possible drive names with the required 
+        punctuation
+    */
     public void setRootDir() {
         for(int i = 0; i < rootDir.length; i++){
             Character temp = (char) (65 + i);
             this.rootDir[i] = temp.toString() + ":\\\\";
         }
     }
-    
+    /*
+        this method returns the drives' name
+        as a List
+    */
     public static List<String> getDrives(){
         root = new ArrayList<>();
         for(String temp : rootDir){
@@ -37,7 +46,9 @@ public class Search {
         }
         return root;
     }
-    
+    /*
+        for test purpose only
+    */
     public void printRoot(){
         for(String temp : root){
             System.out.println(temp.toString());
